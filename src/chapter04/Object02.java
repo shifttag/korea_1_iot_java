@@ -5,7 +5,7 @@ package chapter04;
 // 1. 클래스(Class) 정의
 // - 객체를 만들기 위한 템플릿
 // - 객체의 상태(속성)와 행동(메서드)을 정의
-// >> 실제 데이터나 코드 X, 데이터와 기능의 구조를 정의하난 하나의 개념적인 틀
+// >> 실제 데이터나 코드 X, 데이터와 기능의 구조를 정의하는 하나의 개념적인 틀
 // : class 키워드를 사용하여 정의
 
 // 2. 객체(Object) 정의
@@ -25,10 +25,27 @@ public class Object02 {
 		// >> 클래스의 가시성을 정의 (접근에 대한 권한을 부여)
 		// >> public, private, protected, default
 		
+		// public: 모든 클래스에서 접근 가능
+		// private: 해당 클래스 내부에서만 접근 가능
+		// protected: 같은 패키지 내부 또는 상속 관계에 있는 클래스에서만 접근 가능
+		// default: 같은 패키지 내에서만 접근 가능
+		
 		class Car{
 			// 속성(필드)
 			int maxSpeed;
-			doubl
+			double weight;
+			boolean isElectic;
+		}
+		class Book{
+			String title;
+			String author;
+			int[] pageNumber;
+		}
+		class Person {
+			String name;
+			int age;
+			double height;
+			boolean isEmployed;
 		}
 		
 	}
