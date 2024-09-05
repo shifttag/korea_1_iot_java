@@ -18,7 +18,7 @@ package chapter04;
 // >> 클래스의 모든 인스턴스에서 공유되는 데이터
 // >> 프로그램이 시작될 때 생성, 프로그램이 종료될 때 소멸 (메모리 할당)
 
-class Car{
+class CarClass{
 	// 인스턴스 변수
 	// : 각 객체(인스턴스) 마다 다른 값을 가짐
 	String color;
@@ -28,9 +28,14 @@ class Car{
 	// 정적 변수
 	// : 해당 클래스로 생성되는 모든 객체가 동일한 값을 가짐
 	// : 데이터타입 앞에 static 키워드 사용
+	
+	// 변수 선언과 동시에 공유될 값을 초기화
 	static int tireNumber = 4;
+	static int doorNumber = 4;
 	
 	void accelerate(int increment) {
+		// increment: 지역 변수
+		// >> 메서드 내부에서만 유효
 		speed += increment;	// speed = speed + increment;
 	}
 }
@@ -38,5 +43,22 @@ class Car{
 public class Object05 {
 	public static void main(String[] args) {
 		
+		// CarClass 인스턴스화
+		CarClass car1 = new CarClass();
+		CarClass car2 = new CarClass();
+		
+		// 객체의 인스턴스 변수
+		car1.brand = "kia";
+		car1.color = "black";
+		
+		// 객체의 클래스 변수: 클래스명.속성 (각 인스턴스로도 호출 가능)
+		System.out.println(CarClass.tireNumber);	// 4
+		
+		// >> 클래스 변수는 클래스명으로 접근을 권장!
+//		System.out.println(car1.tireNumber);	// 4
+//		car1.tireNumber = 5;
+//		System.out.println(car2.tireNumber);	// 5
+		
+		System.out.println(car2.brand);	// null
 	}
 }
