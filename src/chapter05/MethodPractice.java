@@ -16,6 +16,7 @@ class BaseballPlayer {
 	
 	// 생성자 >> 인스턴스 변수 초기화 & 정적 변수 후위 증가 (변수명++)
 	BaseballPlayer(String name, double battingAverage, int homeRuns){
+		// 인스턴스 변수 = 매개변수값;
 		this.name = name;
 		this.battingAverage = battingAverage;
 		this.homeRuns = homeRuns;
@@ -25,9 +26,10 @@ class BaseballPlayer {
 	// 인스턴스 메서드
 	// 선수의 타율과 홈런 수를 업데이트 하는 메서드
 	// >> 매개변수로 newBattingAverage, newHomeRuns를 받아 기존의 인스턴스 변수에 재할당
-	void Update(double newBattingAverage, int newHomeRuns){
-		this.battingAverage = newBattingAverage;
-		this.homeRuns = newHomeRuns;
+	void updateStatus(double newBattingAverage, int newHomeRuns){
+		// 인스턴스 변수 = 매개변수값;
+		battingAverage = newBattingAverage;
+		homeRuns = newHomeRuns;
 	}
 }
 
