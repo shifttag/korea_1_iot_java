@@ -57,5 +57,10 @@ public class D_interface {
 		exInterface.printVar1();	// 10
 //		exInterface.printVar2();	
 		exInterface.method();	// Method, 중복되는 디폴트 메서드
+		
+		// cf) 인터페이스의 다형성
+		// : 인터페이스를 구현한 클래스의 객체는 해당 인터페이스 타입이 될 수 있음
+		// >> 해당 인터페이스 내의 구조만을 가지며
+		// >> 재정의 된 메서드는 유지
 	}
 }
