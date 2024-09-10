@@ -1,0 +1,21 @@
+lombok 설치
+C:\Users\ehdgu\OneDrive\바탕 화면\eclipse 에 파일 옮기기
+
+(알집으로 뜬다면)
+cmd창 열어서
+jdk 파일에 bin까지 파일 경로 이동
+
+java -jar (lombok파일경로)\lombok.jar
+
+
+
+eclipse.ini 메모장에
+마지막줄 (-javaagent:lombok.jar) 추가
+
+
+프로젝트명 -> properties -> annotation processing -> 체크박스 check 후 apply
+
+
+java Bulid path => Libraries -> modulepath -> add External JARs -> lombok.jars -> apply
+
+project -> clean -> clean
