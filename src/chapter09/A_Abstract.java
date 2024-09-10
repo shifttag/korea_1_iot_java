@@ -1,6 +1,6 @@
 package chapter09;
 
-// 추상화(Abstact)
+// 추상화(Absrtact)
 
 // 추상 클래스
 // : 미완성 설계도, 완전하지 않은 클래스
