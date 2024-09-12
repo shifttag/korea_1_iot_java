@@ -33,14 +33,13 @@ package chapter10;
 // === 자바 예외 처리 방법 ===
 // try-catch 블럭, throws 키워드, 사용자 정의 예외
 
-
 public class Exception01 {
 	public static void main(String[] args) {
 		// 문자(char) > 홀따옴표
 		// 문자열 (String) > 쌍따옴표
 //		System.out.println('abc'); - Error(체크 예외)
 		System.out.println("ABC");
-		
+
 		// try-catch 블록
 		// === 기본 형태 ===
 //		try {
@@ -50,10 +49,10 @@ public class Exception01 {
 //		} catch (ExceptionType e) {
 //			// 예외 발생 시 실행할 코드
 //		}
-		
+
 		// catch 블록: 특정 예외 타입이 발생했을 때 실행될 코드를 정의
 		// >> 다중 catch 블록으로 사용 가능 (여러 예외 처리 가능)
-		
+
 		try {
 			// 런타임(언체크) 예외
 			int division = 10 / 0;
@@ -65,48 +64,48 @@ public class Exception01 {
 			System.out.println("0으로 나눌수 없습니다");
 		}
 		System.out.println("정상적인 실행입니다.");
-		
-		
+
 		System.out.println("===========================");
 		try {
 			int division = 10 / 0;
-			
+
 			int[] numbers = new int[5];
 			numbers[10] = 50;
 			// ArithmeticException 발생
-			
+
 			String text = null;
 			System.out.println(text.length());
 			// : null을 계산할 경우 예외 발생
 			// : NullPointerException 발생
-			
-		} catch(ArrayIndexOutOfBoundsException e) {
+
+		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("배열 인덱스 초과 오류 발생" + e.getMessage());
-		} catch(NullPointerException e) {
+		} catch (NullPointerException e) {
 			System.out.println("null을 계산할 경우 오류 발생" + e.getMessage());
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println("초과 오류 발생" + e.getMessage());
 		} finally {
 			System.out.println("finally 블록 실행");
 			// >> 예외 발생 여부와 상관없이 항상 실행되는 코드 블록
 		}
-		
+
 		// == throw 블록 ==
 		// : 예외를 직접 발생시키는데 사용
 		// >> 특정 조건에서 예외를 발생 시킬 경우 사용
 		// >> 주로 조건문과 함께 사용
-		
+
 		int age = -10;
 		try {
-			if(age < 0) {
+			if (age < 0) {
 				// throw new 예외타입("예외 메시지 작성");
 				// >> 예외 메시지는 예외 객체의 .getMessae()를 통해 출력
 				throw new Exception("나이는 음수가 될 수 없습니다");
 			}
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			// 나이는 음수가 될 수 없습니다.
 		}
 		System.out.println("반드시 실행되어야 할 코드");
 	}
 }
+
