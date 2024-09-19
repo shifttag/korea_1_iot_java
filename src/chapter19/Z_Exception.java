@@ -38,9 +38,6 @@ class CustomException extends Exception{
 	}
 }
 
-
-
-
 public class Z_Exception {
 	
 	public static void validate(int age) throws CustomException {
@@ -57,6 +54,10 @@ public class Z_Exception {
 			// : 예외가 발생했을 때 예외의 발생 경로와 관련된 스택 트레이스를 출력하는 메서드
 			// > 예외가 발생한 위치와 예외가 전파된 경로를 포함하여 상세 정보를 출력
 			e.printStackTrace();
+			
+			// 2. getMessage();
+			// : 예외 객체에 저장된 예외 메시지를 반환하는 메서드(출력 X)
+			// >> 문자열 반환 - 출력하고자 하는 경우 system.out.print으로 출력
 			System.out.println(e.getMessage());
 		}
 		System.out.println("정상적인 로직");
